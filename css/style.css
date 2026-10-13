@@ -1,0 +1,374 @@
+/* =========================================================
+   style.css: sarili mong design, nag-o-override sa Bootstrap
+   ========================================================= */
+
+/* ---------- 1. Variables (kulay) ----------
+   Palitan lang ang --accent para mag-iba ang buong theme. */
+:root {
+  --accent: #0d9488;          /* teal */
+  --accent-hover: #0f766e;
+  --section-alt-bg: #f6f8fa;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+}
+
+/* Dark mode: Bootstrap 5.3 ang bahala sa karamihan.
+   Dito lang natin inaayos ang sarili nating kulay. */
+[data-bs-theme="dark"] {
+  --accent: #2dd4bf;
+  --accent-hover: #5eead4;
+  --section-alt-bg: #161b22;
+  --nav-bg: rgba(13, 17, 23, 0.92);
+}
+
+/* ---------- 2. Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;   /* para hindi matakpan ng navbar ang heading */
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.text-accent { color: var(--accent); }
+
+/* ---------- 3. Custom button ---------- */
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
+/* ---------- 4. Navbar ---------- */
+.navbar {
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(8px);
+}
+.navbar .nav-link.active {    /* nilalagyan ng Bootstrap scrollspy ng .active */
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+/* ---------- 5. Hero / Home ---------- */
+.hero {
+  min-height: 100vh;
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--accent);
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: inherit;
+  transition: color 0.2s;
+}
+.social-links a:hover { color: var(--accent); }
+
+/* ---------- 6. Sections ---------- */
+.section { padding: 80px 0; }
+.section-alt { background-color: var(--section-alt-bg); }
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.section-title::after {       /* maliit na linya sa ilalim ng title */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent);
+}
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ---------- 7. Cards ---------- */
+.info-card { border-top: 4px solid var(--accent); }
+
+.project-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+.project-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  background-color: var(--section-alt-bg);
+}
+
+/* ---------- 8. Career timeline ---------- */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  border-left: 3px solid var(--accent);
+}
+.timeline li {
+  position: relative;
+  padding: 0 0 1.5rem 1.5rem;
+}
+.timeline li::before {        /* bilog sa timeline */
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+.timeline-label {
+  display: block;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ---------- 9. Certificates ---------- */
+.cert-item { cursor: pointer; margin: 0; }
+.cert-item img { transition: opacity 0.2s; }
+.cert-item:hover img { opacity: 0.85; }
+.cert-item figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ---------- 10. Reflection ---------- */
+.reflection-text {
+  max-width: 750px;           /* mas madaling basahin kapag hindi masyadong malapad */
+  line-height: 1.8;
+}
+
+/* ---------- 11. Back to top ---------- */
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: none;              /* ipapakita ng JS */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+#backToTop.show { display: flex; }
+
+/* ---------- 12. Footer ---------- */
+footer { border-top: 1px solid var(--bs-border-color); }
+
+/* ---------- 13. Responsive (phone) ---------- */
+@media (max-width: 576px) {
+  .section { padding: 56px 0; }
+  .profile-photo { width: 200px; height: 200px; }
+  .hero { text-align: center; }
+  .hero .d-flex { justify-content: center; }
+}
+
+/* =========================================================
+   14. PURPLE THEME + BACKGROUND IMAGE
+   ========================================================= */
+
+/* Mga kulay na purple (pinapalitan ang teal sa itaas) */
+:root {
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --page-bg: #faf7ff;
+  --section-alt-bg: #f3ecff;
+  --nav-bg: rgba(250, 247, 255, 0.92);
+}
+[data-bs-theme="dark"] {
+  --accent: #a78bfa;
+  --accent-hover: #c4b5fd;
+  --page-bg: #130d1f;
+  --section-alt-bg: #1d142e;
+  --nav-bg: rgba(19, 13, 31, 0.92);
+}
+
+/* =========================================================
+   GUMAGALAW NA BACKGROUND SA BUONG PAGE
+   Ang larawan ay nasa assets/bg-purple.png
+   ========================================================= */
+html { background-color: #1a0b2e; }
+body { background: transparent; }
+
+/* Layer A: ang larawan, nakadikit sa screen (fixed) kaya kita hanggang baba */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -20%;               /* mas malaki para walang puwang habang gumagalaw */
+  z-index: -1;               /* nasa likod ng lahat ng content */
+  background: url("../assets/bg-purple.png") center / cover no-repeat;
+  pointer-events: none;
+}
+body::before {
+  animation: flowA 30s ease-in-out infinite alternate;
+}
+
+/* Layer B: kopya ng larawan na nakabaligtad at kasalungat ang galaw.
+   Pinagpapatong (screen blend) kaya parang umaagos ang usok/laso. */
+body::after {
+  transform: scaleX(-1);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  animation: flowB 24s ease-in-out infinite alternate;
+}
+
+/* Galaw ng Layer A: anod pakaliwa, ikot nang kaunti, zoom */
+@keyframes flowA {
+  0%   { transform: translate(0, 0)      rotate(0deg)  scale(1); }
+  50%  { transform: translate(-6%, 3%)   rotate(2deg)  scale(1.12); }
+  100% { transform: translate(5%, -3%)   rotate(-2deg) scale(1.06); }
+}
+
+/* Galaw ng Layer B: kasalungat na direksyon, may pagbago ng kulay */
+@keyframes flowB {
+  0%   { transform: scaleX(-1) translate(0, 0)    rotate(0deg)  scale(1.05); filter: hue-rotate(0deg); }
+  50%  { transform: scaleX(-1) translate(-5%, -4%) rotate(-3deg) scale(1.15); filter: hue-rotate(-20deg); }
+  100% { transform: scaleX(-1) translate(6%, 3%)  rotate(2deg)  scale(1.08); filter: hue-rotate(10deg); }
+}
+
+/* Para sa mga user na naka-off ang animation sa computer nila */
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after { animation: none; }
+}
+
+/* Home: madilim na layer sa kaliwa para mabasa ang puting text */
+.hero {
+  background: linear-gradient(90deg, rgba(20, 5, 35, 0.7) 0%, rgba(20, 5, 35, 0.3) 60%, rgba(20, 5, 35, 0.05) 100%);
+  color: #fff;
+}
+
+/* Ibang sections: malabong layer sa ibabaw ng larawan para mabasa ang text.
+   Light mode = maputing salamin, Dark mode = madilim na salamin. */
+.section {
+  background-color: rgba(250, 245, 255, 0.86);
+  backdrop-filter: blur(3px);
+}
+.section-alt {
+  background-color: rgba(243, 232, 255, 0.8);
+}
+[data-bs-theme="dark"] .section {
+  background-color: rgba(18, 8, 32, 0.72);
+}
+[data-bs-theme="dark"] .section-alt {
+  background-color: rgba(30, 14, 52, 0.66);
+}
+
+/* Puting text sa Home para kita sa madilim na background */
+.hero h1 { color: #fff; }
+.hero .text-body-secondary { color: #e9d5ff !important; }
+.hero .text-accent { color: #d8b4fe; }
+.hero .lead { color: #f3e8ff; }
+.hero .social-links a { color: #f3e8ff; }
+.hero .social-links a:hover { color: #d8b4fe; }
+.hero .btn-outline-secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.hero .btn-outline-secondary:hover {
+  background-color: #fff;
+  color: #4c1d95;
+}
+
+/* Purple na linya sa ilalim ng section titles */
+.section-title::after {
+  width: 80px;
+  background: linear-gradient(90deg, #7c3aed, #c084fc);
+}
+
+/* Profile photo: WALANG background (assets/profile.png, transparent)
+   Walang frame o border, nakatayo lang sa ibabaw ng purple na background. */
+.profile-photo {
+  width: 440px;
+  height: auto;               /* sinusunod ang tunay na sukat ng larawan */
+  max-width: 100%;            /* para hindi lumampas sa maliit na screen */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+  /* purple na liwanag sa paligid ng katawan */
+  filter: drop-shadow(0 0 25px rgba(167, 139, 250, 0.55))
+          drop-shadow(0 15px 30px rgba(20, 5, 35, 0.6));
+  /* unti-unting naglalaho sa ibaba para hindi biglang putol */
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+}
+@media (max-width: 576px) {
+  .profile-photo {
+    width: 280px;
+    height: auto;
+  }
+}
+
+/* Purple na "Beginner" badge sa Technical Skills */
+.badge-beginner {
+  background-color: #ede9fe;
+  color: #5b21b6;
+  font-weight: 600;
+}
+[data-bs-theme="dark"] .badge-beginner {
+  background-color: #4c1d95;
+  color: #ede9fe;
+}
+
+/* Kahon para sa code sample sa Cybersecurity case */
+.code-box {
+  background-color: #1e1033;
+  color: #e9d5ff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  white-space: pre-wrap;      /* para hindi lumampas sa card */
+  word-break: break-word;
+}
+
+/* Preview ng resume sa Resume section */
+.resume-preview img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(20, 5, 35, 0.45);
+  transition: transform 0.2s;
+}
+.resume-preview:hover img {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Para sa diagram at flowchart: buo ang larawan, hindi napuputol */
+.project-card .img-contain {
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 6px;
+}
+
+/* Footer na purple */
+footer {
+  background: linear-gradient(90deg, #4c1d95, #7c3aed);
+  color: #fff;
+  border-top: none;
+}

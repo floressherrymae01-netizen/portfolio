@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Sherry Mae L. Flores | BSIT Portfolio</title>
+  <meta name="description" content="Portfolio of Sherry Mae L. Flores, BSIT student and aspiring Junior Web Developer.">
+
+  <!-- Bootstrap 5 CSS (galing sa CDN, hindi na kailangang i-download) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- SARILI MONG CSS: laging ilagay PAGKATAPOS ng Bootstrap para ma-override mo ito -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home"> Sherry Mae L. Flores </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navLinks" aria-controls="navLinks"
+              aria-expanded="false" aria-label="Toggle menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#problem-solving">Problem-Solving</a></li>
+          <li class="nav-item"><a class="nav-link" href="#employability">Employability</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reflection">Reflection</a></li>
+        </ul>
+        <button id="themeToggle" class="btn btn-sm btn-outline-secondary ms-lg-3 mt-2 mt-lg-0"
+                type="button" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HOME (STEP 8) ============ -->
+  <header id="home" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="text-accent fw-semibold mb-2">Hi, I'm</p>
+          <h1 class="display-4 fw-bold"> Sherry Mae L. Flores </h1>
+          <!-- PALITAN: Target IT position mo (STEP 1) -->
+         <h2 class="h4 text-body-secondary mb-4">Aspiring Junior Web Developer</h2>
+          <!-- PALITAN: Professional Statement mo (STEP 1) -->
+          <p class="lead">
+          I am a BSIT student with skills in HTML and CSS, basic programming, and Arduino.
+I am interested in pursuing a career as a Junior Web Developer.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a href="#projects" class="btn btn-accent btn-lg">View My Projects</a>
+            <a href="assets/resume.pdf" class="btn btn-outline-secondary btn-lg" download>
+              <i class="bi bi-download"></i> Download Resume
+            </a>
+          </div>
+          <div class="social-links mt-4">
+            <a href="https://github.com/floressherrymae01-netizen" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/sherrymae-flores-9a1774443" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:floressherrymae01@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <!-- PALITAN: ilagay ang professional photo mo sa assets/profile.jpg -->
+          <img src="assets/profile.png" alt="Photo of Sherry Mae L. Flores" class="profile-photo">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ 1. PROFESSIONAL PROFILE (STEP 9) ============ -->
+    <section id="profile" class="section">
+      <div class="container">
+        <h2 class="section-title">Professional Profile</h2>
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <!-- PALITAN: About Me, 150 to 250 words. Sariling salita mo! -->
+            <p>I am Sherry Mae L. Flores, a Bachelor of Science in Information Technology student at Datamex College of Saint Adeline in Parañaque City. I am studying in the BSIT program from 2023 to 2027, where I am learning programming, web development, and database management.</p>
+            <p>The part of IT that I enjoy the most is building websites and systems. I like turning an idea into something people can actually use. Seeing my code work in the browser motivates me to keep learning.</p>
+            <p>I have basic skills in HTML, CSS, JavaScript, and Bootstrap, which I used to build this portfolio website. I have also built simple Arduino projects using LEDs and sensors, and I joined webinars about Arduino, website building, Linux, network security, and office skills.</p>
+            <p>I am still at a beginner level, but I am eager to learn and improve. My goal is to start as a Junior Web Developer or IT Trainee where I can practice my skills and learn from experienced developers. I value hard work, honesty, and patience, and I want to grow step by step into a skilled developer who builds systems that help people and businesses.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="card info-card">
+              <div class="card-body">
+                <h3 class="h6 fw-bold">Quick Facts</h3>
+                <ul class="list-unstyled mb-0">
+                  <li><strong>Program:</strong> BSIT</li>
+                  <li><strong>School:</strong> Datamex College of Saint Adeline</li>
+                  <li><strong>Field:</strong> Web Development </li>
+                  <li><strong>Location:</strong> Las Piñas City</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. TECHNICAL SKILLS (STEP 2 + STEP 10) ============ -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="text-body-secondary">Basic skills I have learned so far. I am still learning and improving every day.</p>
+
+        <!-- Filter buttons: ang data-filter ay dapat tugma sa data-category ng bawat row -->
+        <div class="btn-group flex-wrap mb-3" role="group" aria-label="Filter skills">
+          <button class="btn btn-outline-secondary active" data-filter="all">All</button>
+          <button class="btn btn-outline-secondary" data-filter="web">Web</button>
+          <button class="btn btn-outline-secondary" data-filter="programming">Programming</button>
+          <button class="btn btn-outline-secondary" data-filter="hardware">Hardware</button>
+          <button class="btn btn-outline-secondary" data-filter="tools">Tools</button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table align-middle" id="skillsTable">
+            <thead>
+              <tr><th>Area</th><th>Skill</th><th>Level</th><th>Evidence</th></tr>
+            </thead>
+            <tbody>
+              <!-- Lahat Beginner: tapat at tugma sa projects at certificates -->
+              <tr data-category="web"><td>Web</td><td>HTML and CSS</td><td><span class="badge badge-beginner">Beginner</span></td><td>This portfolio website, Code Create Deploy webinar</td></tr>
+              <tr data-category="web"><td>Web</td><td>Basic JavaScript</td><td><span class="badge badge-beginner">Beginner</span></td><td>This portfolio website</td></tr>
+              <tr data-category="web"><td>Web</td><td>Bootstrap</td><td><span class="badge badge-beginner">Beginner</span></td><td>This portfolio website</td></tr>
+              <tr data-category="programming"><td>Programming</td><td>Basic programming (variables, if-else, loops)</td><td><span class="badge badge-beginner">Beginner</span></td><td>School activities, Arduino projects</td></tr>
+              <tr data-category="programming"><td>Database</td><td>Basic MySQL</td><td><span class="badge badge-beginner">Beginner</span></td><td>Eskinita Apparel project (team)</td></tr>
+              <tr data-category="hardware"><td>Hardware</td><td>Arduino (gas sensor, LCD, buzzer)</td><td><span class="badge badge-beginner">Beginner</span></td><td>Gas Leakage Alarm System, Next Gen Arduino webinar</td></tr>
+              <tr data-category="hardware"><td>Hardware</td><td>Basic computer troubleshooting</td><td><span class="badge badge-beginner">Beginner</span></td><td>Arduino projects, school activities</td></tr>
+              <tr data-category="tools"><td>Tools</td><td>Git and GitHub</td><td><span class="badge badge-beginner">Beginner</span></td><td>This portfolio on GitHub</td></tr>
+              <tr data-category="tools"><td>Tools</td><td>Linux command line</td><td><span class="badge badge-beginner">Beginner</span></td><td>Linux and System Administration webinar</td></tr>
+              <tr data-category="tools"><td>Tools</td><td>Microsoft Office (Word, Excel, PowerPoint)</td><td><span class="badge badge-beginner">Beginner</span></td><td>School activities, Digital Office Mastery webinar</td></tr>
+              <tr data-category="tools"><td>Security</td><td>Basic network security awareness</td><td><span class="badge badge-beginner">Beginner</span></td><td>Network Security and Zero Trust webinar</td></tr>
+              <tr data-category="tools"><td>AI</td><td>Responsible AI use</td><td><span class="badge badge-beginner">Beginner</span></td><td>AI Usage Log</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. PROJECTS (STEP 11 to 15) ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="text-body-secondary">School projects I worked on with my team at Datamex College of Saint Adeline.</p>
+        <div class="row g-4">
+
+          <!-- PROJECT 1: Web/Application Development (STEP 11) -->
+          <div class="col-md-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/eskinita-ipo.jpg" class="card-img-top img-contain" alt="IPO framework diagram of the Eskinita Apparel e-commerce system">
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-beginner mb-2 align-self-start">Project 1 · Web System · Team</span>
+                <h3 class="h5 card-title">Eskinita Apparel: Inventory and Online Ordering System</h3>
+                <p class="card-text">A web-based e-commerce system for a local streetwear brand. Customers can browse products, add them to a cart, and place orders, while the admin manages inventory and order status.</p>
+                <ul class="small mb-3">
+                  <li>Customer sign-up and login with hashed passwords</li>
+                  <li>Product catalog with stock tracking and low-stock alerts</li>
+                  <li>Shopping cart, checkout, and order history</li>
+                  <li>Admin dashboard: products, orders, and sales stats</li>
+                  <li>Evaluated positively by 200 survey respondents</li>
+                </ul>
+                <p class="small text-body-secondary">Tech: HTML, CSS, JavaScript, Node.js, Express.js, MySQL (XAMPP)</p>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="assets/eskinita-ipo.jpg" class="btn btn-sm btn-accent" target="_blank" rel="noopener">View System Diagram</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- PROJECT 2: Web / Database (STEP 13) -->
+          <div class="col-md-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/onlyjobs-flowchart.jpg" class="card-img-top img-contain" alt="Login flowchart of the OnlyJobs website">
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-beginner mb-2 align-self-start">Project 2 · Website · Team</span>
+                <h3 class="h5 card-title">OnlyJobs: Job Finder Website</h3>
+                <p class="card-text">A website where users can log in to look for jobs. We planned the login process with a flowchart before building the system.</p>
+                <ul class="small mb-3">
+                  <li>Log in with a user account (User ID and password)</li>
+                  <li>Option to log in through Gmail</li>
+                  <li>Login details checked against the user database</li>
+                  <li>Users go to the homepage after a successful login</li>
+                </ul>
+                <p class="small text-body-secondary">Tools: Flowchart design, HTML, CSS, database</p>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="assets/onlyjobs-flowchart.jpg" class="btn btn-sm btn-accent" target="_blank" rel="noopener">View Flowchart</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- PROJECT 3: Specialization: Arduino / IoT (STEP 14) -->
+          <div class="col-md-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/gas-alarm.jpg" class="card-img-top" alt="Finished Gas Leakage Alarm System in a box with a warning label, LCD, sensor, and buzzer">
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-beginner mb-2 align-self-start">Project 3 · Arduino · Team</span>
+                <h3 class="h5 card-title">Gas Leakage Alarm System</h3>
+                <p class="card-text">An Arduino device that detects gas leaks. When the sensor detects gas, the buzzer sounds an alarm and the LCD shows a warning.</p>
+                <ul class="small mb-3">
+                  <li>Bought and checked all the materials</li>
+                  <li>Connected the parts on a breadboard and tested the code</li>
+                  <li>Found that our first Arduino Uno was defective after troubleshooting</li>
+                  <li>Rebuilt it with a new Arduino Uno and it worked</li>
+                </ul>
+                <p class="small text-body-secondary">Parts: Arduino Uno, MQ-5 gas sensor, LCD, buzzer, breadboard, wires</p>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <a href="assets/gas-alarm.jpg" class="btn btn-sm btn-accent" target="_blank" rel="noopener">View Photo</a>
+                  <a href="assets/gas-alarm-inside.jpg" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener">Inside the Box</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. PROBLEM-SOLVING (STEP 17 + 18) ============ -->
+    <section id="problem-solving" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Problem-Solving</h2>
+        <p class="text-body-secondary">Troubleshooting cases from my Arduino projects and computer use. Click a case to read it.</p>
+
+        <!-- Bootstrap accordion: bawat .accordion-item ay isang case -->
+        <div class="accordion" id="casesAccordion">
+
+          <!-- CASE 1 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#case1">
+                Case 1: Code will not upload to the Arduino (Gas Leakage Alarm project)
+              </button>
+            </h3>
+            <div id="case1" class="accordion-collapse collapse show" data-bs-parent="#casesAccordion">
+              <div class="accordion-body">
+                <p><strong>Problem:</strong> While building our Gas Leakage Alarm System, we got an error every time we tried to upload the code to the Arduino Uno.</p>
+                <p><strong>Possible Causes:</strong> Wrong board or COM port selected in the Arduino IDE, a bad USB cable, a mistake in the code, or a defective Arduino board.</p>
+                <p><strong>Diagnostic Procedure:</strong> We checked that the correct board (Arduino Uno) and COM port were selected, tried the USB cable again, and tested with a simple example code. The upload still failed, even with code that should work, so the problem was not in our code or settings.</p>
+                <p><strong>Solution:</strong> We found that the Arduino Uno itself was defective. We replaced it with a new Arduino Uno, uploaded the code successfully, and rebuilt the alarm. It worked perfectly.</p>
+                <p class="mb-0"><strong>Lesson Learned:</strong> Troubleshoot one thing at a time: settings, cable, code, then hardware. Testing with a simple example helps prove if the problem is the code or the board.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE 2 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case2">
+                Case 2: LED does not light up in my Arduino circuit
+              </button>
+            </h3>
+            <div id="case2" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
+              <div class="accordion-body">
+                <p><strong>Problem:</strong> The code uploaded without errors, but the LED did not turn on.</p>
+                <p><strong>Possible Causes:</strong> LED placed backwards, wrong pin number in the code, loose jumper wire, missing resistor, or a damaged LED.</p>
+                <p><strong>Diagnostic Procedure:</strong> I compared the pin number in my code with the pin where the wire was connected. I checked the LED direction: the long leg (positive) must go to the Arduino pin and the short leg (negative) to GND. I also tested the LED with the simple Blink example.</p>
+                <p><strong>Solution:</strong> The LED was placed backwards and the code used pin 12 while my wire was on pin 13. I flipped the LED and changed the code to the correct pin. The LED turned on.</p>
+                <p class="mb-0"><strong>Lesson Learned:</strong> The code and the wiring must match. Testing with a simple example helps me find out if the problem is in the hardware or the code.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE 3 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case3">
+                Case 3: Sensor gives wrong or strange readings
+              </button>
+            </h3>
+            <div id="case3" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
+              <div class="accordion-body">
+                <p><strong>Problem:</strong> My sensor showed random numbers that did not change correctly, even when I covered it or moved it.</p>
+                <p><strong>Possible Causes:</strong> Loose wires, sensor connected to the wrong pin, missing GND or power connection, or wrong code for reading the sensor.</p>
+                <p><strong>Diagnostic Procedure:</strong> I opened the Serial Monitor to see the values from the sensor. I checked that VCC was connected to 5V, GND to GND, and the signal wire to the pin used in the code. I pressed each wire on the breadboard to see if the values changed.</p>
+                <p><strong>Solution:</strong> The GND wire was loose on the breadboard. After I pushed it in firmly, the readings became stable and changed correctly.</p>
+                <p class="mb-0"><strong>Lesson Learned:</strong> The Serial Monitor is very useful for troubleshooting because it shows what the Arduino is actually reading. Loose wires can cause random values.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE 4 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case4">
+                Case 4: Computer is very slow
+              </button>
+            </h3>
+            <div id="case4" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
+              <div class="accordion-body">
+                <p><strong>Problem:</strong> The computer became very slow. Programs took a long time to open and sometimes froze.</p>
+                <p><strong>Possible Causes:</strong> Too many programs running, a program using too much memory or CPU, too many startup apps, or a full hard drive.</p>
+                <p><strong>Diagnostic Procedure:</strong> I pressed Ctrl + Shift + Esc to open Task Manager. I sorted the list by CPU and Memory to see which programs were using the most resources. I also checked the Startup tab and the free space on the drive.</p>
+                <p><strong>Solution:</strong> I closed the programs I was not using, ended a program that was using too much memory, and disabled unnecessary startup apps. I also deleted temporary files to free up space. The computer became faster.</p>
+                <p class="mb-0"><strong>Lesson Learned:</strong> Task Manager helps find the real cause before restarting or reinstalling. Only end programs that I know are safe to close.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE 5 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case5">
+                Case 5: Connected to Wi-Fi but no internet
+              </button>
+            </h3>
+            <div id="case5" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
+              <div class="accordion-body">
+                <p><strong>Problem:</strong> The computer showed it was connected to Wi-Fi, but websites would not load.</p>
+                <p><strong>Possible Causes:</strong> Problem with the router, wrong IP address, DNS problem, or the internet service itself was down.</p>
+                <p><strong>Diagnostic Procedure:</strong> I checked if other devices could use the internet. Then I opened Command Prompt and used <code>ipconfig</code> to check the IP address, and <code>ping 8.8.8.8</code> to test the connection to the internet.</p>
+                <p><strong>Solution:</strong> I ran <code>ipconfig /release</code>, <code>ipconfig /renew</code>, and <code>ipconfig /flushdns</code>, then restarted the router. After that, websites loaded normally.</p>
+                <p class="mb-0"><strong>Lesson Learned:</strong> "Connected" does not always mean there is internet. Testing step by step, from the device to the router to the internet, helps find where the problem is.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ CYBERSECURITY CASE STUDY (STEP 18) ============ -->
+        <h3 class="h4 mt-5">Cybersecurity Case Study: SQL Injection</h3>
+        <p class="text-body-secondary">A beginner-level look at a common website weakness and how to prevent it.</p>
+        <div class="row g-3">
+          <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">1. What is the vulnerability?</h4>
+            <p class="mb-0">SQL injection is a weakness in websites that use a database. It happens when the website puts whatever the user types directly into a database command (SQL query). An attacker can type special text that changes the command and makes the database do something it should not do.</p>
+          </div></div></div>
+          <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">2. How can it happen?</h4>
+            <p>For example, a login form takes the username and password and builds a query by joining text together. If someone types <code>' OR '1'='1</code> in the password box, the query becomes always true, and they may log in without the correct password.</p>
+            <p class="small fw-bold mb-1">Unsafe (do not use):</p>
+            <pre class="code-box"><code>$sql = "SELECT * FROM users
+  WHERE username = '" . $_POST['user'] . "'
+  AND password = '" . $_POST['pass'] . "'";</code></pre>
+          </div></div></div>
+          <div class="col-md-4"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">3. What are the risks?</h4>
+            <ul class="mb-0">
+              <li>Logging in as another user without a password</li>
+              <li>Stealing private data like names, emails, and passwords</li>
+              <li>Changing or deleting records in the database</li>
+              <li>Breaking the Data Privacy Act of 2012 if personal data leaks</li>
+            </ul>
+          </div></div></div>
+          <div class="col-md-4"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">4. How can developers prevent it?</h4>
+            <p>Use <strong>prepared statements</strong>. The query is written first with a placeholder (<code>?</code>), and the user's input is sent separately as plain data, so it cannot change the command.</p>
+            <p class="small fw-bold mb-1">Safe:</p>
+            <pre class="code-box mb-0"><code>$stmt = $conn->prepare(
+  "SELECT * FROM users WHERE username = ?");
+$stmt->bind_param("s", $_POST['user']);
+$stmt->execute();</code></pre>
+          </div></div></div>
+          <div class="col-md-4"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">5. What security practices should be implemented?</h4>
+            <ul class="mb-0">
+              <li>Use prepared statements for every query with user input</li>
+              <li>Check user input (type, length, allowed characters)</li>
+              <li>Save passwords as hashes, never as plain text</li>
+              <li>Show simple error messages to users, not database errors</li>
+              <li>Give the database account only the permissions it needs</li>
+              <li>Test only on my own system, never on other people's websites</li>
+            </ul>
+          </div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. EMPLOYABILITY (STEP 19 to 23) ============ -->
+    <section id="employability" class="section">
+      <div class="container">
+        <h2 class="section-title">Employability</h2>
+        <p class="text-body-secondary">How I use AI, my career plan, and my interview answers.</p>
+
+        <!-- ============ AI USAGE LOG (STEP 19) ============ -->
+        <h3 class="h4">AI Usage Log</h3>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead><tr><th>Date</th><th>Task</th><th>AI Assistance</th><th>My Verification</th></tr></thead>
+            <tbody>
+              <!-- PALITAN kung may hindi totoo. Dapat tapat ang bawat row. -->
+              <tr><td>Oct 2026</td><td>Portfolio website</td><td>Gave the starter code and explained it</td><td>I added my details and tested it in the browser.</td></tr>
+              <tr><td>Oct 2026</td><td>Design and photos</td><td>Made the purple design and edited my photo</td><td>I chose the design and photo and checked how it looks.</td></tr>
+              <tr><td>Oct 2026</td><td>Written sections</td><td>Drafted About Me, cases, and answers</td><td>I edited them to match my real experience.</td></tr>
+              <tr><td>Oct 2026</td><td>Projects and resume</td><td>Summarized our project files and made my resume</td><td>I checked that the details are correct.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row g-3 mb-5">
+          <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">What did AI help me do?</h4>
+            <p class="mb-0">It helped me build and design my portfolio faster.</p>
+          </div></div></div>
+          <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">What did I check myself?</h4>
+            <p class="mb-0">My details, skills, and projects, and that the website works.</p>
+          </div></div></div>
+          <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">What did I learn?</h4>
+            <p class="mb-0">AI is a helper, but I must still understand and check my work.</p>
+          </div></div></div>
+          <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">What limitations did I find?</h4>
+            <p class="mb-0">AI does not know my personal details, so I had to correct some parts.</p>
+          </div></div></div>
+        </div>
+
+        <!-- ============ CAREER DEVELOPMENT PLAN (STEP 23) ============ -->
+        <h3 class="h4">Career Development Plan</h3>
+        <div class="row g-4 mb-5">
+          <div class="col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Target Position:</strong> Junior Web Developer or IT Trainee</li>
+              <li class="list-group-item"><strong>Target Field:</strong> Web Development</li>
+              <li class="list-group-item"><strong>Current Skills:</strong> Basic HTML, CSS, JavaScript, and Arduino</li>
+              <li class="list-group-item"><strong>Skills to Improve:</strong> JavaScript and MySQL</li>
+              <li class="list-group-item"><strong>Technologies to Learn:</strong> PHP and GitHub</li>
+              <li class="list-group-item"><strong>Certification:</strong> freeCodeCamp Responsive Web Design</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ol class="timeline">
+              <li><span class="timeline-label">6 months</span> Finish a free web design course and build a small project.</li>
+              <li><span class="timeline-label">1 year</span> Graduate and get my first IT job.</li>
+              <li><span class="timeline-label">3 years</span> Become a confident web developer.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ============ TECHNICAL INTERVIEW NOTES (STEP 20) ============ -->
+        <h3 class="h4">Technical Interview Notes</h3>
+        <div class="row g-3 mb-5">
+          <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">HTML, CSS, and JavaScript?</h4>
+            <p class="mb-0">HTML is the content, CSS is the design, and JavaScript adds actions.</p>
+          </div></div></div>
+          <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h4 class="h6 fw-bold">What is a database?</h4>
+            <p class="mb-0">A place to store organized data, like products or users, using MySQL.</p>
+          </div></div></div>
+        </div>
+
+        <!-- ============ MOCK INTERVIEW ANSWERS (STEP 21) ============ -->
+        <h3 class="h4">Mock Interview Answers</h3>
+        <div class="accordion" id="interviewAccordion">
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">1. Tell me about yourself.</button></h4>
+            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              I am Sherry Mae L. Flores, a BSIT student at Datamex College of Saint Adeline. I have basic skills in HTML, CSS, JavaScript, and Arduino, and I am eager to learn.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">2. Why did you choose BSIT?</button></h4>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              I was curious about how computers and websites work, and I like creating things.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">3. What are your strongest IT skills?</button></h4>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              Basic HTML and CSS, Arduino, and troubleshooting step by step.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">4. What is your weakest skill?</button></h4>
+            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              JavaScript. I only know the basics, so I practice with small exercises.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">5. Tell us about your major project.</button></h4>
+            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              Eskinita Apparel, an online ordering and inventory system our team built for a local clothing brand.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">6. What was your biggest technical problem?</button></h4>
+            <div id="q6" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              Our Gas Leakage Alarm code would not upload to the Arduino.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7">7. How did you solve it?</button></h4>
+            <div id="q7" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              We checked the settings, cable, and code one by one, found that the board was defective, and replaced it.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8">8. How do you handle deadlines?</button></h4>
+            <div id="q8" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              I list my tasks and do the most important ones first.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9">9. How do you work with a team?</button></h4>
+            <div id="q9" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              I listen, share ideas, and do my part on time.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q10">10. Why should we hire you?</button></h4>
+            <div id="q10" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              I am hardworking, honest, and willing to learn.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q11">11. What are you currently learning?</button></h4>
+            <div id="q11" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              JavaScript and GitHub.
+            </div></div>
+          </div>
+
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q12">12. Where do you want to grow professionally?</button></h4>
+            <div id="q12" class="accordion-collapse collapse" data-bs-parent="#interviewAccordion"><div class="accordion-body">
+              I want to grow as a web developer.
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. RESUME (STEP 6) ============ -->
+    <section id="resume" class="section section-alt">
+      <div class="container text-center">
+        <h2 class="section-title">Resume</h2>
+        <p class="text-body-secondary">My one-page IT resume. Click the preview to open the full PDF.</p>
+
+        <!-- Preview ng resume: kapag kinlick, bubukas ang PDF sa bagong tab -->
+        <a href="assets/resume.pdf" target="_blank" rel="noopener" class="resume-preview d-inline-block my-3">
+          <img src="assets/resume-preview.png" alt="Preview of Sherry Mae L. Flores's resume" class="img-fluid">
+        </a>
+
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-lg">
+            <i class="bi bi-eye"></i> View Resume
+          </a>
+          <a href="assets/resume.pdf" class="btn btn-accent btn-lg" download="Sherry_Mae_Flores_Resume.pdf">
+            <i class="bi bi-file-earmark-pdf"></i> Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ 7. CERTIFICATES ============ -->
+    <section id="certificates" class="section">
+      <div class="container">
+        <h2 class="section-title">Certificates and Achievements</h2>
+        <p class="text-body-secondary">Click a certificate to view it larger.</p>
+        <div class="row g-4">
+
+          <!-- Certificate 1: Arduino -->
+          <div class="col-sm-6 col-lg-4">
+            <figure class="cert-item" data-bs-toggle="modal" data-bs-target="#certModal"
+                    data-img="assets/cert-arduino.jpg"
+                    data-title="Next Gen Arduino: Innovation Through Embedded Technology">
+              <img src="assets/cert-arduino.jpg" alt="Certificate: Next Gen Arduino webinar" class="img-fluid rounded shadow-sm">
+              <figcaption>
+                <strong>Next Gen Arduino: Innovation Through Embedded Technology</strong><br>
+                1-hour webinar · August 6, 2026
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Certificate 2: Website -->
+          <div class="col-sm-6 col-lg-4">
+            <figure class="cert-item" data-bs-toggle="modal" data-bs-target="#certModal"
+                    data-img="assets/cert-website.jpg"
+                    data-title="Code, Create, Deploy: Building and Publishing a Website">
+              <img src="assets/cert-website.jpg" alt="Certificate: Code, Create, Deploy webinar" class="img-fluid rounded shadow-sm">
+              <figcaption>
+                <strong>Code, Create, Deploy: Building and Publishing a Website</strong><br>
+                1-hour webinar · August 4, 2026
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Certificate 3: Linux -->
+          <div class="col-sm-6 col-lg-4">
+            <figure class="cert-item" data-bs-toggle="modal" data-bs-target="#certModal"
+                    data-img="assets/cert-linux.jpg"
+                    data-title="Linux &amp; System Administration: Master the Command Line">
+              <img src="assets/cert-linux.jpg" alt="Certificate: Linux and System Administration webinar" class="img-fluid rounded shadow-sm">
+              <figcaption>
+                <strong>Linux &amp; System Administration: Master the Command Line</strong><br>
+                2-hour webinar · August 7, 2026
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Certificate 4: Network Security -->
+          <div class="col-sm-6 col-lg-4">
+            <figure class="cert-item" data-bs-toggle="modal" data-bs-target="#certModal"
+                    data-img="assets/cert-network-security.jpg"
+                    data-title="The Future of Network Security, AI, Automation and Zero Trust">
+              <img src="assets/cert-network-security.jpg" alt="Certificate: Future of Network Security webinar" class="img-fluid rounded shadow-sm">
+              <figcaption>
+                <strong>The Future of Network Security, AI, Automation and Zero Trust</strong><br>
+                2-hour webinar · August 5, 2026
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Certificate 5: Office -->
+          <div class="col-sm-6 col-lg-4">
+            <figure class="cert-item" data-bs-toggle="modal" data-bs-target="#certModal"
+                    data-img="assets/cert-office.jpg"
+                    data-title="Digital Office Mastery: Essential Skills for Computer &amp; Administrative Staff">
+              <img src="assets/cert-office.jpg" alt="Certificate: Digital Office Mastery webinar" class="img-fluid rounded shadow-sm">
+              <figcaption>
+                <strong>Digital Office Mastery: Essential Skills for Computer &amp; Administrative Staff</strong><br>
+                1-hour webinar · August 5, 2026
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+        <p class="small text-body-secondary mt-4 mb-0">
+          All webinars were held online via Google Meet and organized by Ethel Programming Computer Programming Services.
+        </p>
+      </div>
+    </section>
+
+          
+        
+    
+  
+
+    <!-- ============ 8. GITHUB (STEP 4) ============ -->
+    <section id="github" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">GitHub</h2>
+        <p class="text-body-secondary">Source code of my projects.</p>
+        <a href="https://github.com/floressherrymae01-netizen" target="_blank" rel="noopener" class="btn btn-accent mb-3">
+          <i class="bi bi-github"></i> View my GitHub profile
+        </a>
+        <a href="https://www.linkedin.com/in/sherrymae-flores-9a1774443" target="_blank" rel="noopener" class="btn btn-outline-secondary mb-3 ms-1">
+          <i class="bi bi-linkedin"></i> View my LinkedIn profile
+        </a>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="https://github.com/floressherrymae01-netizen/portfolio" target="_blank" rel="noopener">portfolio</a>: source code of this website</li>
+          <li class="list-group-item"><a href="https://github.com/floressherrymae01-netizen/eskinita-apparel" target="_blank" rel="noopener">eskinita-apparel</a>: inventory and online ordering system (team capstone)</li>
+          <li class="list-group-item"><a href="https://github.com/floressherrymae01-netizen/gas-leakage-alarm" target="_blank" rel="noopener">gas-leakage-alarm</a>: Arduino gas leak detector with source code</li>
+          <li class="list-group-item"><a href="https://github.com/floressherrymae01-netizen/onlyjobs" target="_blank" rel="noopener">onlyjobs</a>: job finder website and login flowchart</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 9. CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <p><i class="bi bi-envelope"></i> <a href="mailto:floressherrymae01@gmail.com">floressherrymae01@gmail.com</a></p>
+            <p><i class="bi bi-geo-alt"></i> Las Piñas City, Philippines</p>
+          </div>
+          <div class="col-lg-7">
+            <!-- novalidate: tayo ang magva-validate gamit ang JavaScript -->
+            <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Your name</label>
+                <input type="text" id="name" class="form-control" required>
+                <div class="invalid-feedback">Pakilagay ang pangalan mo.</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" class="form-control" rows="4" required minlength="10"></textarea>
+                <div class="invalid-feedback">At least 10 characters.</div>
+              </div>
+              <button type="submit" class="btn btn-accent">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. REFLECTION (STEP 24) ============ -->
+    <section id="reflection" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Reflection</h2>
+        <div class="reflection-text">
+          <!-- Maikling bersyon. Paalala: 500 to 800 words ang hinihingi ng STEP 24. -->
+          <p>Before BSIT, I only knew technology as a user. I did not know how programs were made or how a computer could control things like lights and sensors.</p>
+          <p>At Datamex College of Saint Adeline, the most important thing I learned is to solve problems step by step: read the error, test little by little, and find the real cause instead of guessing.</p>
+          <p>My Arduino projects taught me the most. I learned to connect LEDs and sensors and control them with code. Building this portfolio also taught me how HTML, CSS, and JavaScript work together.</p>
+          <p>My biggest challenge was finding the cause when nothing worked, like our Gas Leakage Alarm that would not upload because the Arduino Uno was defective, and images that would not show because my files were in the wrong folders. I learned to be patient and check the simple things first.</p>
+          <p>I went from only using applications to building simple programs, circuits, and websites, and I joined webinars on Arduino, web, Linux, network security, and office skills.</p>
+          <p>I still need to improve my JavaScript, learn PHP and MySQL, and communicate my work more clearly.</p>
+          <p>I want to be a reliable, honest IT professional who keeps learning and builds websites that help people. I also learned that AI is helpful, but I must understand and check my own work.</p>
+          <p>I am ready to start my career in IT. I am still a beginner, but I have hands-on projects, I can troubleshoot step by step, and I am willing to work hard and keep growing.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Sherry Mae L. Flores · BSIT, Datamex College of Saint Adeline</small>
+    </div>
+  </footer>
+
+  <!-- Back to top button (pinapakita ng JS kapag nag-scroll pababa) -->
+  <a href="#home" id="backToTop" class="btn btn-accent" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- Certificate modal (iisa lang, papalitan ng JS ang laman) -->
+  <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="certModalTitle">Certificate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="certModalImg" src="" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS: kailangan para gumana ang navbar toggle, accordion, modal, scrollspy -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SARILI MONG JS: laging nasa dulo ng body -->
+  <script src="js/script.js"></script>
+</body>
+</html>
