@@ -18,7 +18,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 70px;   /* para hindi matakpan ng navbar ang heading */
-  background-color: #1a0b2e;  /* kulay habang naglo-load ang background image */
+  background-color: #12041f;  /* madilim na lila habang naglo-load ang background image */
 }
 
 body {
@@ -28,44 +28,40 @@ body {
 
 .text-accent { color: var(--accent); }
 
-/* ---------- 3. Gumagalaw na background (buong page) ----------
-   Dalawang kopya ng assets/bg-purple.png na magkasalungat ang galaw,
-   pinagpatong (screen blend) kaya parang umaagos ang usok o laso. */
-body::before,
-body::after {
+/* ---------- 3. Background: video ----------
+   Tatlong layer, lahat nasa likod ng content:
+   (1) assets/bg-ribbons.jpg: static na larawan, makikita kung hindi mag-play ang video.
+   (2) .bg-video: ang video (assets/bg-video.mp4), kontrolado ng js/script.js.
+   (3) maliliit na kumikislap na gintong tuldok (canvas, gawa rin ng js/script.js). */
+body::before {
   content: "";
   position: fixed;
-  inset: -20%;                /* mas malaki para walang puwang habang gumagalaw */
-  z-index: -1;                /* nasa likod ng lahat ng content */
-  background: url("../assets/bg-purple.png") center / cover no-repeat;
+  inset: 0;
+  z-index: -3;                                      /* pinakalikod */
+  background: url("../assets/bg-ribbons.jpg") center / cover no-repeat;
   pointer-events: none;
 }
-body::before {
-  animation: flowA 30s ease-in-out infinite alternate;
-}
-body::after {
-  transform: scaleX(-1);      /* nakabaligtad na kopya */
-  opacity: 0.55;
-  mix-blend-mode: screen;
-  animation: flowB 24s ease-in-out infinite alternate;
-}
-
-@keyframes flowA {
-  0%   { transform: translate(0, 0)    rotate(0deg)  scale(1); }
-  50%  { transform: translate(-6%, 3%) rotate(2deg)  scale(1.12); }
-  100% { transform: translate(5%, -3%) rotate(-2deg) scale(1.06); }
-}
-@keyframes flowB {
-  0%   { transform: scaleX(-1) translate(0, 0)     rotate(0deg)  scale(1.05); filter: hue-rotate(0deg); }
-  50%  { transform: scaleX(-1) translate(-5%, -4%) rotate(-3deg) scale(1.15); filter: hue-rotate(-20deg); }
-  100% { transform: scaleX(-1) translate(6%, 3%)   rotate(2deg)  scale(1.08); filter: hue-rotate(10deg); }
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                                /* sakop ang buong screen */
+  transform: scale(1.6);                            /* pinalaki mula sa gitna para lumabas sa screen ang watermark sa mga sulok */
+  z-index: -2;                                      /* nasa ibabaw ng static na larawan */
+  pointer-events: none;
 }
 
-/* Para sa mga user na naka-off ang animation sa computer nila */
-@media (prefers-reduced-motion: reduce) {
-  body::before,
-  body::after { animation: none; }
+/* Particles: ang canvas ay nilalagay ng JS sa body */
+#bgParticles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;                /* nasa ibabaw ng background, nasa likod ng content */
+  pointer-events: none;
 }
+
 
 /* ---------- 4. Buttons ---------- */
 .btn-accent {
@@ -95,30 +91,44 @@ body::after {
   min-height: 100vh;
   padding-top: 90px;
   padding-bottom: 40px;
-  color: #fff;
-  /* madilim sa kaliwa para mabasa ang puting text */
-  background: linear-gradient(90deg, rgba(20, 5, 35, 0.7) 0%, rgba(20, 5, 35, 0.3) 60%, rgba(20, 5, 35, 0.05) 100%);
+  color: #2e1065;
+  /* mapusyaw na layer sa kaliwa para mabasa ang madilim na text sa ibabaw ng dahon */
+  background: linear-gradient(90deg, rgba(247, 240, 255, 0.6) 0%, rgba(247, 240, 255, 0.3) 55%, rgba(247, 240, 255, 0) 100%);
 }
-.hero h1 { color: #fff; }
-.hero .text-body-secondary { color: #e9d5ff !important; }
-.hero .text-accent { color: #d8b4fe; }
-.hero .lead { color: #f3e8ff; }
+.hero h1 { color: #2e1065; }
+.hero .text-body-secondary { color: #5b21b6 !important; }
+.hero .text-accent { color: #6d28d9; }
+.hero .lead { color: #3b0f7a; }
 .hero .btn-outline-secondary {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.7);
+  color: #4c1d95;
+  border-color: rgba(76, 29, 149, 0.6);
 }
 .hero .btn-outline-secondary:hover {
-  background-color: #fff;
-  color: #4c1d95;
+  background-color: #4c1d95;
+  color: #fff;
 }
 
 .social-links a {
   font-size: 1.5rem;
   margin-right: 1rem;
-  color: #f3e8ff;
+  color: #4c1d95;
   transition: color 0.2s;
 }
-.social-links a:hover { color: #d8b4fe; }
+.social-links a:hover { color: #7c3aed; }
+
+/* Dark mode: madilim na layer at puting text sa Home */
+[data-bs-theme="dark"] .hero {
+  color: #fff;
+  background: linear-gradient(90deg, rgba(10, 4, 20, 0.72) 0%, rgba(10, 4, 20, 0.42) 55%, rgba(10, 4, 20, 0.08) 100%);
+}
+[data-bs-theme="dark"] .hero h1 { color: #fff; }
+[data-bs-theme="dark"] .hero .text-body-secondary { color: #e9d5ff !important; }
+[data-bs-theme="dark"] .hero .text-accent { color: #d8b4fe; }
+[data-bs-theme="dark"] .hero .lead { color: #f3e8ff; }
+[data-bs-theme="dark"] .hero .btn-outline-secondary { color: #fff; border-color: rgba(255, 255, 255, 0.7); }
+[data-bs-theme="dark"] .hero .btn-outline-secondary:hover { background-color: #fff; color: #4c1d95; }
+[data-bs-theme="dark"] .social-links a { color: #f3e8ff; }
+[data-bs-theme="dark"] .social-links a:hover { color: #d8b4fe; }
 
 /* Profile photo: walang background (transparent PNG), walang frame */
 .profile-photo {
@@ -126,8 +136,8 @@ body::after {
   max-width: 100%;            /* para hindi lumampas sa maliit na screen */
   height: auto;
   /* purple na liwanag sa paligid ng katawan */
-  filter: drop-shadow(0 0 25px rgba(167, 139, 250, 0.55))
-          drop-shadow(0 15px 30px rgba(20, 5, 35, 0.6));
+  filter: drop-shadow(0 0 22px rgba(167, 139, 250, 0.5))
+          drop-shadow(0 14px 26px rgba(60, 20, 110, 0.35));
   /* unti-unting naglalaho sa ibaba para hindi biglang putol */
   -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
@@ -137,12 +147,11 @@ body::after {
    Malabong "salamin" sa ibabaw ng background para mabasa ang text. */
 .section {
   padding: 80px 0;
-  background-color: rgba(250, 245, 255, 0.86);
-  backdrop-filter: blur(3px);
+  background-color: rgba(250, 245, 255, 0.84);
 }
-.section-alt { background-color: rgba(243, 232, 255, 0.8); }
-[data-bs-theme="dark"] .section     { background-color: rgba(18, 8, 32, 0.72); }
-[data-bs-theme="dark"] .section-alt { background-color: rgba(30, 14, 52, 0.66); }
+.section-alt { background-color: rgba(240, 228, 252, 0.76); }
+[data-bs-theme="dark"] .section     { background-color: rgba(14, 5, 28, 0.58); }
+[data-bs-theme="dark"] .section-alt { background-color: rgba(26, 10, 48, 0.46); }
 
 .section-title {
   font-weight: 700;
@@ -182,6 +191,15 @@ body::after {
   background-color: #ffffff;
   padding: 6px;
 }
+
+/* Logo ng project: buo ang larawan, kulay ng frame ay kapareho ng background ng logo */
+.project-card .img-logo {
+  height: 200px;
+  object-fit: contain;
+  padding: 0;
+}
+.project-card .img-logo-dark  { background-color: #101010; }
+.project-card .img-logo-light { background-color: #ffffff; }
 
 /* ---------- 9. Skills badge ---------- */
 .badge-beginner {
@@ -281,7 +299,14 @@ footer {
 /* ---------- 17. Phone ---------- */
 @media (max-width: 576px) {
   .section { padding: 56px 0; }
-  .hero { text-align: center; }
+  .hero {
+    text-align: center;
+    /* sa phone, pantay na layer para mabasa ang text */
+    background: linear-gradient(180deg, rgba(247, 240, 255, 0.72), rgba(247, 240, 255, 0.45));
+  }
+  [data-bs-theme="dark"] .hero {
+    background: linear-gradient(180deg, rgba(10, 4, 20, 0.84), rgba(10, 4, 20, 0.5));
+  }
   .hero .d-flex { justify-content: center; }
   .profile-photo { width: 280px; }
 }
