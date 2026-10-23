@@ -212,6 +212,10 @@ body::before {
   background: linear-gradient(135deg, #4c1d95, #a78bfa);
 }
 
+/* Mock interview video */
+.mock-video { max-width: 760px; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 10px 30px rgba(20, 5, 35, 0.4); }
+.mock-video video { width: 100%; height: 100%; object-fit: contain; }
+
 /* ---------- 9. Skills badge ---------- */
 .badge-beginner {
   background-color: #ede9fe;
