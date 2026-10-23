@@ -1,0 +1,31 @@
+/* style.css: purple theme, kapareho ng portfolio */
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; padding: 32px 16px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(160deg, #1b0736, #4c1d95); color: #2e1065; }
+.app { max-width: 520px; margin: 0 auto; background: #faf5ff; border-radius: 16px; padding: 28px 24px; box-shadow: 0 16px 40px rgba(0,0,0,.35); }
+h1 { margin: 0 0 4px; font-size: 1.6rem; }
+.subtitle { margin: 0 0 18px; color: #6b4fa3; }
+button { padding: 10px 16px; border: 1px solid #7c3aed; border-radius: 8px; background: #fff; color: #6d28d9; font-size: 1rem; cursor: pointer; }
+button:hover { background: #f3e8ff; }
+button.primary { background: #7c3aed; color: #fff; }
+button.primary:hover { background: #6d28d9; }
+input, select { padding: 10px 12px; border: 1px solid #c4b5fd; border-radius: 8px; font-size: 1rem; background: #fff; color: #2e1065; min-width: 0; }
+input:focus, select:focus { outline: 2px solid #7c3aed; border-color: #7c3aed; }
+.error { min-height: 1.2em; margin: 8px 0 0; color: #b91c1c; font-weight: 600; font-size: .9rem; }.summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
+.box { background: #fff; border: 2px solid #ddd6fe; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px; text-align: center; }
+.box span { font-size: .8rem; color: #6b4fa3; }
+.box strong { font-size: 1.05rem; }
+#balance.negative { color: #b91c1c; }
+.form { display: flex; flex-direction: column; gap: 8px; }
+.form-row { display: flex; gap: 8px; }
+.form-row input { flex: 1; }
+.list { list-style: none; margin: 14px 0 0; padding: 0; }
+.entry { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #ede9fe; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+.entry .desc { flex: 1; word-break: break-word; }
+.entry .amt { font-weight: 700; }
+.entry.income .amt { color: #15803d; }
+.entry.expense .amt { color: #b91c1c; }
+.entry .delete { padding: 4px 10px; border-color: #ddd6fe; color: #b91c1c; }
+.empty { text-align: center; color: #6b4fa3; padding: 12px 0; }
+button.ghost { border-color: #c4b5fd; color: #6b4fa3; margin-top: 8px; }
+@media (max-width: 420px) { .form-row { flex-wrap: wrap; } }

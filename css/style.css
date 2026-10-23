@@ -201,6 +201,17 @@ body::before {
 .project-card .img-logo-dark  { background-color: #101010; }
 .project-card .img-logo-light { background-color: #ffffff; }
 
+/* Banner ng practice projects (icon sa halip na larawan) */
+.practice-banner {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff;
+  background: linear-gradient(135deg, #4c1d95, #a78bfa);
+}
+
 /* ---------- 9. Skills badge ---------- */
 .badge-beginner {
   background-color: #ede9fe;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Analysis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Sales Analysis</h1>
+    <p class="subtitle">Sample practice data of a small store, January to March (not real sales).</p>
+
+    <section class="cards">
+      <div class="card"><span>Total sales</span><strong id="total"></strong></div>
+      <div class="card"><span>Best-selling product</span><strong id="best"></strong></div>
+      <div class="card"><span>Average per product</span><strong id="avg"></strong></div>
+    </section>
+
+    <h2>Total Sales by Product (PHP)</h2>
+    <div id="chart" class="chart"></div>
+
+    <h2>Monthly Sales (PHP)</h2>
+    <table id="monthTable"><thead><tr><th>Month</th><th>Total Sales (PHP)</th></tr></thead><tbody></tbody></table>
+
+    <p class="note">Data is in <code>sales.csv</code>. The SQL queries are in <code>queries.sql</code>.</p>
+  </main>
+  <script>
+// Ang data (galing sa sales.csv)
+var sales = [
+  { month: "January", product: "Bottled Water", price: 15, units: 86 },
+  { month: "January", product: "Instant Noodles", price: 12, units: 145 },
+  { month: "January", product: "Coffee Sachet", price: 8, units: 119 },
+  { month: "January", product: "Biscuits", price: 10, units: 46 },
+  { month: "January", product: "Soft Drink", price: 20, units: 84 },
+  { month: "February", product: "Bottled Water", price: 15, units: 121 },
+  { month: "February", product: "Instant Noodles", price: 12, units: 45 },
+  { month: "February", product: "Coffee Sachet", price: 8, units: 155 },
+  { month: "February", product: "Biscuits", price: 10, units: 142 },
+  { month: "February", product: "Soft Drink", price: 20, units: 143 },
+  { month: "March", product: "Bottled Water", price: 15, units: 94 },
+  { month: "March", product: "Instant Noodles", price: 12, units: 152 },
+  { month: "March", product: "Coffee Sachet", price: 8, units: 93 },
+  { month: "March", product: "Biscuits", price: 10, units: 53 },
+  { month: "March", product: "Soft Drink", price: 20, units: 146 }
+];
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

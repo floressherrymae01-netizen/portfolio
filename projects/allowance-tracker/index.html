@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Allowance Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Allowance Tracker</h1>
+    <p class="subtitle">Keep track of the money you receive and spend.</p>
+
+    <section class="summary">
+      <div class="box"><span>Income</span><strong id="income">0</strong></div>
+      <div class="box"><span>Expenses</span><strong id="expense">0</strong></div>
+      <div class="box"><span>Balance</span><strong id="balance">0</strong></div>
+    </section>
+
+    <form id="form" class="form">
+      <input id="desc" type="text" placeholder="Description (e.g. Allowance, Lunch)" maxlength="40" aria-label="Description">
+      <div class="form-row">
+        <input id="amount" type="number" min="0" step="0.01" placeholder="Amount (PHP)" aria-label="Amount">
+        <select id="type" aria-label="Type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button type="submit" class="primary">Add</button>
+      </div>
+    </form>
+    <p id="error" class="error" role="alert"></p>
+
+    <ul id="list" class="list"></ul>
+    <button id="clearBtn" type="button" class="ghost">Clear all</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
