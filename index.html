@@ -169,6 +169,7 @@
                   <li>Final score with a message and Try again button</li>
                 </ul>
                 <p class="small text-body-secondary">Tech: HTML, CSS, JavaScript</p>
+                <p class="small mb-3"><i class="bi bi-tools"></i> Problem-solving: <a href="#cybersecurity" data-goto="cybersecurity">Cybersecurity case study (password safety)</a></p>
                 <div class="mt-auto d-flex gap-2">
                   <a href="projects/it-quiz/index.html" class="btn btn-sm btn-accent" target="_blank" rel="noopener">View Project</a>
                   <a href="https://github.com/floressherrymae01-netizen/it-basics-quiz" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> View Code</a>
@@ -190,6 +191,7 @@
                   <li>Excel chart made from the CSV data</li>
                 </ul>
                 <p class="small text-body-secondary">Tools: Excel (CSV), MySQL, HTML, CSS, JavaScript</p>
+                <p class="small mb-3"><i class="bi bi-tools"></i> Problem-solving: <a href="#problem-solving" data-case="case2">Case 2: no numbers and no chart</a></p>
                 <div class="mt-auto d-flex gap-2">
                   <a href="projects/sales-analysis/index.html" class="btn btn-sm btn-accent" target="_blank" rel="noopener">View Project</a>
                   <a href="https://github.com/floressherrymae01-netizen/sales-analysis" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> View Code</a>
@@ -211,6 +213,7 @@
                   <li>Saved in the browser with localStorage</li>
                 </ul>
                 <p class="small text-body-secondary">Tech: HTML, CSS, JavaScript</p>
+                <p class="small mb-3"><i class="bi bi-tools"></i> Problem-solving: <a href="#problem-solving" data-case="case3">Case 3: wrong input</a></p>
                 <div class="mt-auto d-flex gap-2">
                   <a href="projects/allowance-tracker/index.html" class="btn btn-sm btn-accent" target="_blank" rel="noopener">View Project</a>
                   <a href="https://github.com/floressherrymae01-netizen/allowance-tracker" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> View Code</a>
@@ -250,37 +253,39 @@
           </div>
 
           <!-- CASE 2 -->
-          <div class="accordion-item">
+          <div class="accordion-item" id="case2-item">
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case2">
-                Case 2: LED does not light up in my Arduino circuit
+                Case 2: Sales Analysis page shows no numbers and no chart
               </button>
             </h3>
             <div id="case2" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
               <div class="accordion-body">
-                <p><strong>Problem:</strong> The code uploaded without errors, but the LED did not turn on.</p>
-                <p><strong>Possible Causes:</strong> LED placed backwards, wrong pin number in the code, loose jumper wire, missing resistor, or a damaged LED.</p>
-                <p><strong>Diagnostic Procedure:</strong> I compared the pin number in my code with the pin where the wire was connected. I checked the LED direction: the long leg (positive) must go to the Arduino pin and the short leg (negative) to GND. I also tested the LED with the simple Blink example.</p>
-                <p><strong>Solution:</strong> The LED was placed backwards and the code used pin 12 while my wire was on pin 13. I flipped the LED and changed the code to the correct pin. The LED turned on.</p>
-                <p class="mb-0"><strong>Lesson Learned:</strong> The code and the wiring must match. Testing with a simple example helps me find out if the problem is in the hardware or the code.</p>
+                <p><strong>Problem:</strong> When I first opened my Sales Analysis project, the summary cards were empty and the bar chart did not appear.</p>
+                <p><strong>Possible Causes:</strong> Wrong file path to <code>script.js</code>, an error in the JavaScript code, the sales data list was empty or in the wrong format, or the browser was showing an old version of the page.</p>
+                <p><strong>Diagnostic Procedure:</strong> I checked that <code>script.js</code> and <code>style.css</code> loaded, and looked for error messages in the browser. There were none, so I checked the data list in the page and found that it was empty. I compared it with <code>sales.csv</code>, which has 15 rows.</p>
+                <p><strong>Solution:</strong> I put the 15 rows from <code>sales.csv</code> into the data list and reloaded the page. The totals and the chart appeared. I confirmed the result by adding the numbers myself: the total sales of PHP 21,425 matched.</p>
+                <p class="mb-2"><strong>Lesson Learned:</strong> When a page is blank, check the data before blaming the code. Compare the result with a manual calculation.</p>
+                <p class="small mb-0">Related project: <a href="#projects" data-goto="projects">Sales Analysis</a></p>
               </div>
             </div>
           </div>
 
           <!-- CASE 3 -->
-          <div class="accordion-item">
+          <div class="accordion-item" id="case3-item">
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case3">
-                Case 3: Sensor gives wrong or strange readings
+                Case 3: Allowance Tracker accepts wrong input
               </button>
             </h3>
             <div id="case3" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
               <div class="accordion-body">
-                <p><strong>Problem:</strong> My sensor showed random numbers that did not change correctly, even when I covered it or moved it.</p>
-                <p><strong>Possible Causes:</strong> Loose wires, sensor connected to the wrong pin, missing GND or power connection, or wrong code for reading the sensor.</p>
-                <p><strong>Diagnostic Procedure:</strong> I opened the Serial Monitor to see the values from the sensor. I checked that VCC was connected to 5V, GND to GND, and the signal wire to the pin used in the code. I pressed each wire on the breadboard to see if the values changed.</p>
-                <p><strong>Solution:</strong> The GND wire was loose on the breadboard. After I pushed it in firmly, the readings became stable and changed correctly.</p>
-                <p class="mb-0"><strong>Lesson Learned:</strong> The Serial Monitor is very useful for troubleshooting because it shows what the Arduino is actually reading. Loose wires can cause random values.</p>
+                <p><strong>Problem:</strong> A tracker can break if the user leaves a field empty or types a zero amount. It would add blank entries and give a wrong balance.</p>
+                <p><strong>Possible Causes:</strong> No checking of the input before adding it, a text typed in the amount box, or an amount of zero or less.</p>
+                <p><strong>Diagnostic Procedure:</strong> I tested the form with wrong input: an empty description, an amount of 0, and an expense bigger than the income. I watched the balance each time.</p>
+                <p><strong>Solution:</strong> I added input checking in <code>script.js</code>. The form now shows a message if the description is empty or the amount is not greater than 0. The balance turns red when it is negative. After the fix, I tested again: PHP 1,000.00 income minus PHP 150.50 and PHP 50.00 expenses gave PHP 799.50.</p>
+                <p class="mb-2"><strong>Lesson Learned:</strong> Test with wrong input, not only correct input. Always check what the user types before using it.</p>
+                <p class="small mb-0">Related project: <a href="#projects" data-goto="projects">Allowance Tracker</a></p>
               </div>
             </div>
           </div>
@@ -323,7 +328,7 @@
         </div>
 
         <!-- ============ CYBERSECURITY CASE STUDY (STEP 18) ============ -->
-        <h3 class="h4 mt-5">Cybersecurity Case Study: SQL Injection</h3>
+        <h3 class="h4 mt-5" id="cybersecurity">Cybersecurity Case Study: SQL Injection</h3>
         <p class="text-body-secondary">A beginner-level look at a common website weakness and how to prevent it.</p>
         <div class="row g-3">
           <div class="col-md-6"><div class="card h-100"><div class="card-body">

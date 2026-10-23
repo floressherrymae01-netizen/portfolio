@@ -216,3 +216,16 @@ document.getElementById("year").textContent = new Date().getFullYear();
   });
   play();
 })();
+
+
+// ---------- 10. Link mula sa project card papunta sa Problem-Solving case ----------
+// Kapag pinindot ang "Problem-solving: Case ..." sa project, bubuksan ang case at pupunta roon.
+document.querySelectorAll("[data-case]").forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    var panel = document.getElementById(link.dataset.case);
+    if (!panel) return;
+    event.preventDefault();
+    bootstrap.Collapse.getOrCreateInstance(panel, { toggle: false }).show();
+    document.getElementById(link.dataset.case + "-item").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
