@@ -247,7 +247,8 @@
                 <p><strong>Possible Causes:</strong> Wrong board or COM port selected in the Arduino IDE, a bad USB cable, a mistake in the code, or a defective Arduino board.</p>
                 <p><strong>Diagnostic Procedure:</strong> We checked that the correct board (Arduino Uno) and COM port were selected, tried the USB cable again, and tested with a simple example code. The upload still failed, even with code that should work, so the problem was not in our code or settings.</p>
                 <p><strong>Solution:</strong> We found that the Arduino Uno itself was defective. We replaced it with a new Arduino Uno, uploaded the code successfully, and rebuilt the alarm. It worked perfectly.</p>
-                <p class="mb-0"><strong>Lesson Learned:</strong> Troubleshoot one thing at a time: settings, cable, code, then hardware. Testing with a simple example helps prove if the problem is the code or the board.</p>
+                <p class="mb-2"><strong>Lesson Learned:</strong> Troubleshoot one thing at a time: settings, cable, code, then hardware. Testing with a simple example helps prove if the problem is the code or the board.</p>
+                <p class="small mb-0">Related project: <a href="https://github.com/floressherrymae01-netizen/gas-leakage-alarm" target="_blank" rel="noopener">Gas Leakage Alarm System (school team project, view code)</a></p>
               </div>
             </div>
           </div>
@@ -309,19 +310,20 @@
           </div>
 
           <!-- CASE 5 -->
-          <div class="accordion-item">
+          <div class="accordion-item" id="case5-item">
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case5">
-                Case 5: Connected to Wi-Fi but no internet
+                Case 5: Pictures do not show on my portfolio website
               </button>
             </h3>
             <div id="case5" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
               <div class="accordion-body">
-                <p><strong>Problem:</strong> The computer showed it was connected to Wi-Fi, but websites would not load.</p>
-                <p><strong>Possible Causes:</strong> Problem with the router, wrong IP address, DNS problem, or the internet service itself was down.</p>
-                <p><strong>Diagnostic Procedure:</strong> I checked if other devices could use the internet. Then I opened Command Prompt and used <code>ipconfig</code> to check the IP address, and <code>ping 8.8.8.8</code> to test the connection to the internet.</p>
-                <p><strong>Solution:</strong> I ran <code>ipconfig /release</code>, <code>ipconfig /renew</code>, and <code>ipconfig /flushdns</code>, then restarted the router. After that, websites loaded normally.</p>
-                <p class="mb-0"><strong>Lesson Learned:</strong> "Connected" does not always mean there is internet. Testing step by step, from the device to the router to the internet, helps find where the problem is.</p>
+                <p><strong>Problem:</strong> While building this portfolio, my certificate pictures did not appear on the page. Only broken image icons showed.</p>
+                <p><strong>Possible Causes:</strong> Wrong path in <code>src</code>, the picture was not in the <code>assets</code> folder, a wrong file name or spelling, or the folder was in the wrong place.</p>
+                <p><strong>Diagnostic Procedure:</strong> I compared the path written in <code>index.html</code> (for example <code>assets/cert-arduino.jpg</code>) with the real folders and file names on my computer.</p>
+                <p><strong>Solution:</strong> My files were in the wrong folders. I moved the pictures into the <code>assets</code> folder that sits beside <code>index.html</code>, so the paths matched, and the pictures appeared.</p>
+                <p class="mb-2"><strong>Lesson Learned:</strong> The path in the code must match the folder and file name exactly. Check the simple things first.</p>
+                <p class="small mb-0">Related project: <a href="https://github.com/floressherrymae01-netizen/portfolio" target="_blank" rel="noopener">This portfolio website (view code)</a></p>
               </div>
             </div>
           </div>
@@ -330,6 +332,7 @@
         <!-- ============ CYBERSECURITY CASE STUDY (STEP 18) ============ -->
         <h3 class="h4 mt-5" id="cybersecurity">Cybersecurity Case Study: SQL Injection</h3>
         <p class="text-body-secondary">A beginner-level look at a common website weakness and how to prevent it.</p>
+        <p class="small">Related project: <a href="#projects" data-goto="projects">IT Basics Quiz</a> (it has a question about strong passwords).</p>
         <div class="row g-3">
           <div class="col-md-6"><div class="card h-100"><div class="card-body">
             <h4 class="h6 fw-bold">1. What is the vulnerability?</h4>
